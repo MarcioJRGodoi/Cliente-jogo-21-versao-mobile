@@ -1,106 +1,31 @@
 package com.example.a21teste;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.net.UnknownHostException;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
-    private TextView status;
-    private Button button1;
-    private Button button2;
-    private Socket socket;
-    private PrintWriter out;
-    private BufferedReader in;
+    private EditText editTextUrl;
+    private Button buttonConnect;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        status = (TextView) findViewById(R.id.status);
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
+        setContentView(R.layout.activity_server_conect);
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    socket = new Socket("192.168.0.133", 9000);
-                    out = new PrintWriter(socket.getOutputStream(), true);
-                    in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            status.setText("Conexão bem sucedida!");
-                        }
-                    });
+        editTextUrl = (EditText) findViewById(R.id.editTextUrl);
+        buttonConnect = (Button) findViewById(R.id.buttonConnect);
 
-                    // Loop para ler as mensagens do servidor
-                    String serverMessage;
-                    while ((serverMessage = in.readLine()) != null) {
-                        final String message = serverMessage;
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                status.append("\n" + message);
-                            }
-                        });
-                    }
-
-                } catch (UnknownHostException e) {
-                    e.printStackTrace();
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            status.setText("Erro: " + e.getMessage());
-                        }
-                    });
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            status.setText("Erro: " + e.getMessage());
-                        }
-                    });
-                }
-            }
-        }).start();
-
-
-        button1.setOnClickListener(new View.OnClickListener() {
+        buttonConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (socket != null && socket.isConnected()) {
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            out.println("1");
-                        }
-                    }).start();
-                }
-            }
-        });
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (socket != null && socket.isConnected()) {
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            out.println("2");
-                        }
-                    }).start();
-                }
+                String url = editTextUrl.getText().toString();
+                Intent intent = new Intent(MainActivity.this, ServerUrlActivity.class);
+                intent.putExtra("url", url);
+                startActivity(intent);
             }
         });
     }
