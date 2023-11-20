@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_above="@+id/linearLayout"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp">
 
         <TextView
             android:id="@+id/status"
@@ -26,24 +26,27 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_marginEnd="8dp"
             android:text="Pegar Carta"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/button_selector"
             android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_marginStart="8dp"
-            android:text="Não Pegar Carta"
-            android:background="@color/colorAccent"
+            android:text="Não Pegar"
+            android:background="@drawable/button_selector"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

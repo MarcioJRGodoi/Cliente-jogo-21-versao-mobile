@@ -10,6 +10,8 @@ import java.net.UnknownHostException;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -29,6 +31,7 @@ public class ServerUrlActivity extends Activity {
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         String url = getIntent().getStringExtra("url");
+        final Animation clickAnimation = AnimationUtils.loadAnimation(this, R.anim.click_animation);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -50,7 +53,12 @@ public class ServerUrlActivity extends Activity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                status.append("\n" + message);
+                                if(message.equals("NOVO JOGO")){
+                                    status.setText("");
+                                }else{
+                                    status.append("\n" + message);
+                                }
+
                                 button1.setEnabled(true);
                                 button2.setEnabled(true);
                             }
@@ -87,6 +95,7 @@ public class ServerUrlActivity extends Activity {
                         @Override
                         public void run() {
                             out.println("1");
+                            v.startAnimation(clickAnimation);
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -108,6 +117,7 @@ public class ServerUrlActivity extends Activity {
                         @Override
                         public void run() {
                             out.println("2");
+                            v.startAnimation(clickAnimation);
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
