@@ -6,5 +6,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorEnabled">#00FF00</color>
-    <color name="colorDisabled">#808080</color> >
+    <color name="colorDisabled">#808080</color>
+    <color name="colorEnableRed">#FF0000</color>
 </resources>

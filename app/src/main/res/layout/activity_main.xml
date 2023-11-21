@@ -8,13 +8,17 @@
         android:layout_height="0dp"
         android:layout_above="@+id/linearLayout"
         android:layout_alignParentTop="true"
-        android:layout_margin="16dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
 
         <TextView
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
+            android:layout_marginTop="280dp"
             android:text="Aguardando conexão..."
             android:textSize="16sp" />
 
@@ -46,7 +50,7 @@
             android:layout_weight="1"
             android:layout_marginStart="8dp"
             android:text="Não Pegar"
-            android:background="@drawable/button_selector"
+            android:background="@drawable/button_selector2"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
