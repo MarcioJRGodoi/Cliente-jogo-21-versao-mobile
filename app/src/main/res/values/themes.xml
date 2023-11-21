@@ -2,8 +2,18 @@
     <!-- Base application theme. -->
     <style name="Base.Theme._21Teste" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/black</item>
     </style>
 
     <style name="Theme._21Teste" parent="Base.Theme._21Teste" />
+
+    <style name="Theme.21Game" parent="Base.Theme._21Teste">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorAccent">@color/navy_blue</item>
+        <item name="colorPrimaryDark">@color/black</item>
+
+        <!-- Defining that new color in ColorPrimaryDark -->
+
+        <!--<item name="colorAccent">@color/mentha_green</item>-->
+    </style>
 </resources>
