@@ -62,15 +62,15 @@ adversário irá vencer. No caso de ambos ultrapassarem 21, ambos sofrem uma der
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:layout_marginHorizontal="15dp"
             android:orientation="horizontal"
-            android:layout_weight="100">
+            android:weightSum="100">
 
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/three_of_hearts"
-                android:layout_weight="50"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -87,18 +87,10 @@ adversário irá vencer. No caso de ambos ultrapassarem 21, ambos sofrem uma der
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
             android:layout_marginHorizontal="15dp"
             android:orientation="horizontal"
             android:layout_weight="100">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="50"
-                android:text="As cartas J, Q e K valem tem o valor de 10."
-                android:textColor="@color/white"
-                android:justificationMode="inter_word"
-                android:layout_gravity="center"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -126,14 +118,23 @@ adversário irá vencer. No caso de ambos ultrapassarem 21, ambos sofrem uma der
                     android:src="@drawable/king_of_hearts"
                     android:layout_weight="50"
                     android:layout_gravity="center"/>
-
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="As cartas J, Q e K valem tem o valor de 10."
+                android:textColor="@color/white"
+                android:justificationMode="inter_word"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_marginHorizontal="15dp"
             android:orientation="horizontal"
             android:weightSum="100">
@@ -162,7 +163,7 @@ adversário irá vencer. No caso de ambos ultrapassarem 21, ambos sofrem uma der
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="80dp"
         android:text="VOLTAR"
         android:textColor="@color/white"
         android:backgroundTint="@color/navy_blue"/>

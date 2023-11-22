@@ -6,17 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class TutorialActivity extends Activity {
+public class CreditsActivity extends Activity {
 
-    private Button btn_voltar;
+    private Button btn_voltar_home;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutorial);
+        setContentView(R.layout.activity_credits);
 
-        btn_voltar = findViewById(R.id.btn_voltar);
+        btn_voltar_home = findViewById(R.id.btn_credits_voltar);
 
-        btn_voltar.setOnClickListener(new View.OnClickListener() {
+        btn_voltar_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();

@@ -18,7 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
         android:text="Conectar"
-        android:background="@color/colorAccent"
+        android:background="@color/navy_blue"
         android:textColor="#FFFFFF"
         />
 

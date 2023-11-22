@@ -6,4 +6,6 @@
     <color name="gray_100">#4F7C7C7C</color>
     <color name="dark_blue">#022037</color>
     <color name="navy_blue">#0C5186</color>
+    <color name="accept_green">#1DC300</color>
+    <color name="reject_red">#A30000</color>
 </resources>

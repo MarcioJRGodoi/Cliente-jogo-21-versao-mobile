@@ -25,6 +25,8 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".HomeActivity"/>
         <activity android:name=".TutorialActivity"/>
+        <activity android:name=".CreditsActivity"/>
+        <activity android:name=".ServerUrlActivity"/>
     </application>
 
 </manifest>
