@@ -158,15 +158,20 @@ adversário irá vencer. No caso de ambos ultrapassarem 21, ambos sofrem uma der
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_voltar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="80dp"
-        android:text="VOLTAR"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/navy_blue"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
 
+        <Button
+            android:id="@+id/btn_voltar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="VOLTAR"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/navy_blue"/>
+    </RelativeLayout>
 
 </LinearLayout>

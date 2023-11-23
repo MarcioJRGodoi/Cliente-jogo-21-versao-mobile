@@ -1,8 +1,12 @@
 package com.example.a21teste;
 
+import static android.text.format.Formatter.formatIpAddress;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,8 +38,8 @@ public class HomeActivity extends Activity {
         });
 
         url_servidor = findViewById(R.id.url_servidor);
-        btn_conectar = findViewById(R.id.btn_conectar);
 
+        btn_conectar = findViewById(R.id.btn_conectar);
         btn_conectar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
