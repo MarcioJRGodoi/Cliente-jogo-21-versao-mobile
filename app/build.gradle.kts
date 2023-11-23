@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.a21teste"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.a21teste"
@@ -31,6 +31,8 @@ android {
 dependencies {
 //  gif dependencies
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
+// ShapeableImageView dependence
+    implementation ("com.google.android.material:material:1.10.0")
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
