@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/dark_blue">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        android:background="@color/dark_blue">
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/poker_cards"
-        android:layout_gravity="center"/>
+        android:id="@+id/pokercards"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/mini_three_of_hearts" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_tituloJogo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_below="@id/pokercards"
         android:text="Jogo do 21"
-        android:textSize="28dp"
+        android:textSize="24dp"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textColor="@color/white"/>
 
     <TextView
+        android:id="@+id/tv_descricaoJogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tituloJogo"
         android:layout_marginHorizontal="30dp"
         android:text="Bem vindo ao jogo do 21! Popularmente conhecido como Blackjack,
 o jogo do 21 consiste em um jogo de aposta praticado em cassinos ou casas de aposta
 onde os jogadores tem o objetivo de atingir ao máximo 21 pontos para obter a vitória."
         android:justificationMode="inter_word"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textColor="@color/white"/>
 
     <LinearLayout
+        android:id="@+id/btn_acoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_descricaoJogo"
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="15dp"
         android:orientation="horizontal">
@@ -63,35 +71,44 @@ onde os jogadores tem o objetivo de atingir ao máximo 21 pontos para obter a vi
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="30dp"
-        android:text="Para iniciar, insira o endereço IP do servidor
+        android:layout_below="@+id/btn_acoes"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="30dp"
+            android:text="Para iniciar, insira o endereço IP do servidor
 que está hospedando o jogo:"
-        android:textColor="@color/white"
-        android:textSize="18dp" />
+            android:textColor="@color/white"
+            android:textSize="18dp" />
 
-    <EditText
-        android:id="@+id/url_servidor"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginVertical="5dp"
-        android:layout_marginHorizontal="15dp"
-        android:hint="Insira o endereço"
-        android:inputType="numberDecimal"
-        android:digits="0123456789."
-        android:textColorHint="@color/gray"
-        android:textColor="@color/white"/>
+        <EditText
+            android:id="@+id/url_servidor"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="15dp"
+            android:hint="Insira o endereço"
+            android:inputType="numberDecimal"
+            android:digits="0123456789."
+            android:textColorHint="@color/gray"
+            android:textColor="@color/white"/>
 
-    <Button
-        android:id="@+id/btn_conectar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginHorizontal="15dp"
-        android:backgroundTint="@color/navy_blue"
-        android:text="INICIAR"
-        android:textColor="@color/white"/>
+        <Button
+            android:id="@+id/btn_conectar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@color/navy_blue"
+            android:text="INICIAR"
+            android:textColor="@color/white"/>
 
-</LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
