@@ -3,9 +3,11 @@ package com.example.a21teste;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.nio.charset.StandardCharsets;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -37,8 +39,8 @@ public class ServerUrlActivity extends Activity {
             public void run() {
                 try {
                     socket = new Socket(url, 9000);
-                    out = new PrintWriter(socket.getOutputStream(), true);
-                    in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8), true);
+                    in = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

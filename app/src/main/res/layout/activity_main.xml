@@ -22,10 +22,12 @@
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:padding="16dp"
             android:layout_marginTop="280dp"
             android:text="Aguardando conexão..."
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
 
     </ScrollView>
 
