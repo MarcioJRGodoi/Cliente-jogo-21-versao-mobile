@@ -2,10 +2,10 @@
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Cor do fundo da barra de aplicativos -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/black</item>
         <!-- Cor da barra de status -->
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/black</item>
         <!-- Cor do botão de ação flutuante e outros elementos interativos -->
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/navy_blue</item>
     </style>
 </resources>

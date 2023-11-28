@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/dark_blue">
+
+    <ImageView
+        android:id="@+id/pokercards"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/poker_cards"/>
+
+    <TextView
+        android:id="@+id/tv_tituloTutorialJogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/pokercards"
+        android:text="Como jogar"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_tutorialIntodrucao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tituloTutorialJogo"
+        android:layout_marginHorizontal="15dp"
+        android:text="● Introdução"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_descricaoTutorialIntroducao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tv_tutorialIntodrucao"
+        android:layout_marginHorizontal="15dp"
+        android:justificationMode="inter_word"
+        android:text="Ambos os jogadores começarão com uma carta a amostra para visualizarem.
+A partir disso, os jogadores poderão escolher se irão pegar ou não uma carta aleatória da mesa.
+O objetivo final é atingir a pontuação igual a 21. Caso algum jogador ultrapasse este valor, seu
+adversário irá vencer. No caso de ambos ultrapassarem 21, ambos sofrem uma derrota."
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_valoresTutorialJogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_descricaoTutorialIntroducao"
+        android:layout_marginHorizontal="15dp"
+        android:text="● Valores das cartas"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_valoresTutorialJogo"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/mini_three_of_hearts"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="As cartas de 3 ao 10 valem seu respectivo número."
+                android:textColor="@color/white"
+                android:justificationMode="inter_word"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal"
+            android:layout_weight="100">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/mini_jack_of_diamonds"
+                    android:layout_weight="50"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/mini_queen_of_spades"
+                    android:layout_weight="50"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/mini_king_of_hearts"
+                    android:layout_weight="50"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="As cartas J, Q e K valem tem o valor de 10."
+                android:textColor="@color/white"
+                android:justificationMode="inter_word"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/mini_ace_of_clubs"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="O Ás vale 1 ou 11 dependendo da pontuação do jogador. Caso possua mais de 10 pontos ele passará a valer 1."
+                android:textColor="@color/white"
+                android:justificationMode="inter_word"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="VOLTAR"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/navy_blue"/>
+
+
+</RelativeLayout>

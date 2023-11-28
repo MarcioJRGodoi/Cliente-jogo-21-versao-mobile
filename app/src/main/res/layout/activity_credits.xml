@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/dark_blue">
+
+    <ImageView
+        android:id="@+id/pokercards"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/poker_cards" />
+
+    <TextView
+        android:id="@+id/tv_criadopor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pokercards"
+        android:layout_gravity="center"
+        android:text="Criado por"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/cardsPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/tv_criadopor"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <!-- Primeiro Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Conteúdo do primeiro card -->
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:src="@drawable/mateus"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                app:strokeColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mateus Soares"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:id="@+id/link_mateus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:src="@drawable/github_icon_white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="MateusS0ares"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:layout_marginHorizontal="40dp"
+                android:text="Aluno de Ciências da Computação"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <!-- Segundo Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Conteúdo do segundo card -->
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:src="@drawable/marcio"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                app:strokeColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marcio de Godoi"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/link_marcio"
+                android:layout_marginHorizontal="30dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="50"
+                    android:src="@drawable/github_icon_white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="MarcioJRGodoi"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:layout_marginHorizontal="40dp"
+                android:text="Aluno de Ciências da Computação"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_agradecimentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cardsPerfil"
+        android:text="Agradecimentos"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_agradecimentos"
+        android:layout_marginHorizontal="30dp"
+        android:justificationMode="inter_word"
+        android:text="Este projeto foi dedicado a disciplina de Redes de Computadores
+lecionada pelo Prof. Dr. Rogério Antônio Casagrande para demonstrar a utilização de
+sockets utilizando a relação entre Cliente X Servidor."
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btn_credits_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/navy_blue"
+        android:text="VOLTAR"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

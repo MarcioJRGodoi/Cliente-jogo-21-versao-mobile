@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:gravity="center">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/loader"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="-40dp"-->
+<!--        android:src="@drawable/suit_loader_nobg">-->
+<!--    </ImageView>-->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:src="@drawable/suit_loader_nobg"/>
+
+    <TextView
+        android:id="@+id/loader_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-240dp"
+        android:textAlignment="center"
+        android:text="Jogo do 21"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold">
+    </TextView>
+
+</LinearLayout>
